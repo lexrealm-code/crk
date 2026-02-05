@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexrealm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-gif"></div>
+    <div id="toast-container"></div>
+
+    <div id="auth-screen">
+        <div class="login-card">
+            <h1>Cracker Gençler</h1>
+            <div class="input-box">
+                <label>Username</label>
+                <input type="text" id="user_input" placeholder="Kullanıcı Adı">
+            </div>
+            <div class="input-box">
+                <label>Password</label>
+                <input type="password" id="pass_input" placeholder="Şifre">
+            </div>
+            <div class="input-box">
+                <label>Key</label>
+                <input type="password" id="key_input" placeholder="crk2026">
+            </div>
+            <button class="btn" onclick="kayit()">Sign Up</button>
+            <button class="btn" style="margin-top:10px; background: white; color: black;" onclick="giris()">Log İn</button>
+        </div>
+    </div>
+
+    <div id="main-panel">
+        <div class="sidebar">
+            <div class="user-info">
+                <div class="avatar"><img src="https://cdn-icons-png.flaticon.com/512/2102/2102647.png"></div>
+                <div>
+                    <div style="font-weight: 800; font-size: 14px; letter-spacing: 1px; display: flex; align-items: center;" id="display_user">ROOT</div>
+                    <div style="font-size: 9px; color: #aaa; display: flex; align-items: center; margin-top: 2px;">
+                        VERIFIED ACCESS <span class="verified-badge"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav">
+                <div class="nav-head">Mernis SXRGU</div>
+                <div class="nav-link" onclick="ac('adsoyad', this)">Ad Soyad Sorgu</div>
+                <div class="nav-link" onclick="ac('tc', this)">TC Sorgu</div>
+                <div class="nav-link" onclick="ac('sulale', this)">Sülale Sorgu</div>
+                <div class="nav-link" onclick="ac('isyeri', this)">İş Yeri Sorgu</div>
+
+                <div class="nav-head">İletişim & Platform</div>
+                <div class="nav-link" onclick="ac('gsm_tc', this)">GSM'den TC</div>
+                <div class="nav-link" onclick="ac('tc_gsm', this)">TC'den GSM</div>
+                <div class="nav-link" onclick="ac('dcid', this)">Discord ID</div>
+
+                <div class="nav-head">Ekstra SXRGU</div>
+                <div class="nav-link" onclick="ac('plaka', this)">Plaka Sorgu</div>
+                <div class="nav-link" onclick="ac('multeci', this)">Mülteci Sorgu</div>
+                <div class="nav-link" onclick="ac('adres', this)">Adres Sorgu</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div id="home_v">
+                <div class="welcome-screen">
+                    <h1>Cracker Gençler | Free</h1>
+                    <p style="color: #bbb; letter-spacing: 4px; font-size: 12px; font-weight: 700;">SUPREME GHOST INTERFACE v4.0</p>
+                </div>
+
+                <div class="card-grid">
+                    <div class="card"><h3>ULTRA FAST</h3><p>Saydam altyapı ile ışık hızında veri işleme.</p></div>
+                    <div class="card"><h3>ENCRYPTED</h3><p>Tüm sorgular uçtan uca gizli tünellerle çekilir.</p></div>
+                    <div class="card"><h3>UNLIMITED</h3><p>Sınır yok, engel yok. Sadece veri var.</p></div>
+                </div>
+
+                <div style="margin-top: 40px; padding: 40px; border: 1px solid var(--border); background: var(--glass-medium); backdrop-filter: blur(10px);">
+                    <p style="font-size: 13px; color: #ccc; line-height: 1.8;">
+                        Panel tamamen optimize edildi. Arka plandaki veri akışını izlerken sorgularınızı yapabilirsiniz. 
+                        Tüm modüller aktif ve güncel API'ler üzerinden çalışmaktadır.
+                    </p>
+                </div>
+            </div>
+
+            <div id="query_v" style="display:none;">
+                <h2 id="tool_name" style="font-family: 'Orbitron'; margin-bottom: 25px; letter-spacing: 3px;">SYSTEM_READY</h2>
+                <div class="query-container">
+                    <div id="input_area" class="input-row"></div>
+                    <button class="btn" style="width: 200px; background: white; color: black;" onclick="sorgula()">SORGULA</button>
+
+                    <div id="monitor_v" class="monitor">
+                        <div style="position: absolute; top: 15px; right: 15px; background: #fff; color: #000; padding: 5px 12px; font-size: 10px; font-weight: 900; cursor: pointer; z-index: 5;" onclick="kopyala()">KOPYALA</div>
+                        <iframe id="api_frame"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
